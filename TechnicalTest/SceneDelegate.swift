@@ -1,12 +1,13 @@
 //
 //  SceneDelegate.swift
-//  TechnicalTest
+//  technicalTest
 //
 //  Created by Ernando Kasaluhe on 21/11/19.
 //  Copyright © 2019 Test Coding. All rights reserved.
 //
 
 import UIKit
+import SwiftUI
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -17,7 +18,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
-        guard let _ = (scene as? UIWindowScene) else { return }
+
+        setMainWindow()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -47,7 +49,33 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Use this method to save data, release shared resources, and store enough scene-specific state information
         // to restore the scene back to its current state.
     }
-
-
 }
 
+//MARK: - Setup Main Window
+extension SceneDelegate {
+    func setMainWindow() {
+        
+        showLoginPage()
+//        if User.currentUser != nil {
+//            self.showHomePage()
+//        } else {
+//            self.showLoginPage()
+//        }
+    }
+    
+    func showLoginPage() {
+        
+        let sb = UIStoryboard(name: "Login", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "LoginVC") as! LoginViewController
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()
+    }
+    
+    func showHomePage() {
+        
+        let sb = UIStoryboard.init(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
+        self.window?.rootViewController = vc
+        self.window?.makeKeyAndVisible()
+    }
+}
