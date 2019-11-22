@@ -7,3 +7,12 @@
 //
 
 import Foundation
+
+let userKeychain = "currentUser"
+
+class Constant: NSObject {
+    static func saveUserData(data: [String: Any]) {
+        let user = User.init(dictionary: data)
+        _ = user?.saveToDiskCurrentUser()
+    }
+}

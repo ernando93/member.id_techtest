@@ -10,6 +10,8 @@ import UIKit
 
 class HomeViewController: UIViewController {
 
+    var awards = DataAwards
+    
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -45,7 +47,7 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 5
+        return awards.count
     }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAt section: Int) -> UIEdgeInsets {
@@ -62,7 +64,8 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "awardsCell", for: indexPath) as? AwardsCell
         
-        cell?.setConfigure()
+        let data = awards[indexPath.row]
+        cell?.setConfigure(with: data)
         
         return cell ?? UICollectionViewCell()
     }

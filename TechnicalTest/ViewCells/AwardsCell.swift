@@ -15,19 +15,21 @@ class AwardsCell: UICollectionViewCell {
     @IBOutlet weak var labelPoin: UILabel!
     @IBOutlet weak var labelTitle: UILabel!
     
-    func setConfigure() {
+    func setConfigure(with data: Awards) {
         
-        setContent()
+        setContent(with: data.title ?? "", type: data.type ?? 0, name: data.name ?? "", poin: data.poin ?? 0)
     }
 }
 
 //MARK: - Setup Content
 extension AwardsCell {
     
-    func setContent() {
+    func setContent(with title: String, type: Int, name: String, poin: Int) {
         
         setImageView(in: imageAwards)
-        setButtonType(in: buttonType)
+        setButtonType(in: buttonType, type: type, name: name)
+        labelTitle.text = title
+        labelPoin.text = String.formatCurrency(number: "\(poin)", digitBeforeZero: 0) + " Poin"
     }
     
     func setImageView(in image: UIImageView) {
@@ -39,8 +41,10 @@ extension AwardsCell {
         image.layer.masksToBounds = false
     }
     
-    func setButtonType(in button: UIButton) {
-        
+    func setButtonType(in button: UIButton, type: Int, name: String) {
+
+        button.backgroundColor = type == 0 ? UIColor(red: 0.0/255.0, green: 122.0/255.0, blue: 255.0/255.0, alpha: 1.0) : .systemOrange
+        button.setTitle(type == 0 ? "   \(name)   " : "   \(name)   ", for: .normal)
         button.isUserInteractionEnabled = false
         button.layer.cornerRadius = 5.0
     }

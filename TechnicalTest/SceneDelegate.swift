@@ -54,13 +54,11 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 //MARK: - Setup Main Window
 extension SceneDelegate {
     func setMainWindow() {
-        
-        showLoginPage()
-//        if User.currentUser != nil {
-//            self.showHomePage()
-//        } else {
-//            self.showLoginPage()
-//        }
+        if User.currentUser != nil {
+            self.showHomePage()
+        } else {
+            self.showLoginPage()
+        }
     }
     
     func showLoginPage() {

@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E19FA3423879528009792D2 /* KeychainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E19FA3223879528009792D2 /* KeychainController.swift */; };
+		9E19FA3523879528009792D2 /* FilePersistentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E19FA3323879528009792D2 /* FilePersistentsController.swift */; };
+		9E19FA372387965F009792D2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E19FA362387965F009792D2 /* User.swift */; };
+		9E19FA3923879953009792D2 /* Awards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E19FA3823879953009792D2 /* Awards.swift */; };
+		9E19FA3D2387A6FC009792D2 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E19FA3B2387A6FC009792D2 /* MenuViewController.swift */; };
+		9E19FA3E2387A6FC009792D2 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E19FA3C2387A6FC009792D2 /* MenuViewController.xib */; };
 		9E1B5197238680B600DC3A5A /* AwardsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E1B5195238680B600DC3A5A /* AwardsCell.swift */; };
 		9E1B5198238680B600DC3A5A /* AwardsCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E1B5196238680B600DC3A5A /* AwardsCell.xib */; };
 		9E9E23A823864B4D00EA0CC8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9E23A723864B4D00EA0CC8 /* AppDelegate.swift */; };
@@ -41,6 +47,12 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E19FA3223879528009792D2 /* KeychainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainController.swift; sourceTree = "<group>"; };
+		9E19FA3323879528009792D2 /* FilePersistentsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilePersistentsController.swift; sourceTree = "<group>"; };
+		9E19FA362387965F009792D2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		9E19FA3823879953009792D2 /* Awards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Awards.swift; sourceTree = "<group>"; };
+		9E19FA3B2387A6FC009792D2 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		9E19FA3C2387A6FC009792D2 /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		9E1B5195238680B600DC3A5A /* AwardsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AwardsCell.swift; sourceTree = "<group>"; };
 		9E1B5196238680B600DC3A5A /* AwardsCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AwardsCell.xib; sourceTree = "<group>"; };
 		9E9E23A423864B4D00EA0CC8 /* TechnicalTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TechnicalTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -88,6 +100,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9E19FA3123879528009792D2 /* Authentication Manager */ = {
+			isa = PBXGroup;
+			children = (
+				9E19FA3223879528009792D2 /* KeychainController.swift */,
+				9E19FA3323879528009792D2 /* FilePersistentsController.swift */,
+			);
+			path = "Authentication Manager";
+			sourceTree = "<group>";
+		};
+		9E19FA3A2387A6E3009792D2 /* Menu VC */ = {
+			isa = PBXGroup;
+			children = (
+				9E19FA3B2387A6FC009792D2 /* MenuViewController.swift */,
+				9E19FA3C2387A6FC009792D2 /* MenuViewController.xib */,
+			);
+			path = "Menu VC";
+			sourceTree = "<group>";
+		};
 		9E9E239B23864B4D00EA0CC8 = {
 			isa = PBXGroup;
 			children = (
@@ -111,6 +141,7 @@
 		9E9E23A623864B4D00EA0CC8 /* TechnicalTest */ = {
 			isa = PBXGroup;
 			children = (
+				9E19FA3123879528009792D2 /* Authentication Manager */,
 				9E9E23DF23864D4B00EA0CC8 /* Utility */,
 				9E9E23E523864DE200EA0CC8 /* Models */,
 				9E9E23E423864DAE00EA0CC8 /* ViewCells */,
@@ -155,6 +186,7 @@
 		9E9E23DA23864CDE00EA0CC8 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				9E19FA3A2387A6E3009792D2 /* Menu VC */,
 				9E9E23DB23864D1900EA0CC8 /* LoginViewController.swift */,
 				9E9E23DD23864D2400EA0CC8 /* HomeViewController.swift */,
 			);
@@ -182,6 +214,8 @@
 		9E9E23E523864DE200EA0CC8 /* Models */ = {
 			isa = PBXGroup;
 			children = (
+				9E19FA362387965F009792D2 /* User.swift */,
+				9E19FA3823879953009792D2 /* Awards.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -291,6 +325,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E9E23D923864C6400EA0CC8 /* Login.storyboard in Resources */,
+				9E19FA3E2387A6FC009792D2 /* MenuViewController.xib in Resources */,
 				9E9E23B423864B4E00EA0CC8 /* LaunchScreen.storyboard in Resources */,
 				9E9E23B123864B4E00EA0CC8 /* Assets.xcassets in Resources */,
 				9E1B5198238680B600DC3A5A /* AwardsCell.xib in Resources */,
@@ -322,9 +357,14 @@
 				9E9E23E323864D6B00EA0CC8 /* Constant.swift in Sources */,
 				9E9E23DE23864D2400EA0CC8 /* HomeViewController.swift in Sources */,
 				9E9E23DC23864D1900EA0CC8 /* LoginViewController.swift in Sources */,
+				9E19FA3423879528009792D2 /* KeychainController.swift in Sources */,
 				9E9E23E123864D5D00EA0CC8 /* Extension.swift in Sources */,
+				9E19FA3523879528009792D2 /* FilePersistentsController.swift in Sources */,
 				9E9E23A823864B4D00EA0CC8 /* AppDelegate.swift in Sources */,
+				9E19FA3D2387A6FC009792D2 /* MenuViewController.swift in Sources */,
 				9E9E23E7238659D100EA0CC8 /* SceneDelegate.swift in Sources */,
+				9E19FA372387965F009792D2 /* User.swift in Sources */,
+				9E19FA3923879953009792D2 /* Awards.swift in Sources */,
 				9E1B5197238680B600DC3A5A /* AwardsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
