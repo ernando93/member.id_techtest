@@ -12,6 +12,7 @@ class HomeViewController: UIViewController {
 
     var awards = DataAwards
     
+    @IBOutlet weak var buttonMenu: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -26,6 +27,7 @@ extension HomeViewController {
     
     func setViewContent() {
         
+        buttonMenu.addTarget(self, action: #selector(buttonMenuTapped), for: .touchUpInside)
         setCollectionView(in: collectionView)
     }
     
@@ -68,5 +70,18 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
         cell?.setConfigure(with: data)
         
         return cell ?? UICollectionViewCell()
+    }
+}
+
+//MARK: - Action
+extension HomeViewController {
+    
+    @objc func buttonMenuTapped() {
+        let vc = MenuViewController(nibName: "MenuViewController", bundle: nil)
+        vc.selected = 0
+        self.addChild(vc)
+        vc.view.frame = self.view.frame
+        self.view.addSubview(vc.view)
+        vc.didMove(toParent: self)
     }
 }

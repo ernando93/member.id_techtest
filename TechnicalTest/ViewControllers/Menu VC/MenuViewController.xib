@@ -9,6 +9,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="TechnicalTest" customModuleProvider="target">
             <connections>
+                <outlet property="tableView" destination="AbZ-Vx-4D2" id="eTM-LS-qfr"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -33,17 +34,25 @@
                             <nil key="textColor"/>
                             <nil key="highlightedColor"/>
                         </label>
+                        <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="AbZ-Vx-4D2">
+                            <rect key="frame" x="0.0" y="336" width="314" height="560"/>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        </tableView>
                     </subviews>
-                    <color key="backgroundColor" systemColor="opaqueSeparatorColor" red="0.77647058820000003" green="0.77647058820000003" blue="0.7843137255" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     <constraints>
+                        <constraint firstAttribute="bottom" secondItem="AbZ-Vx-4D2" secondAttribute="bottom" id="0zV-wD-aJI"/>
+                        <constraint firstItem="AbZ-Vx-4D2" firstAttribute="leading" secondItem="C3c-9h-VcT" secondAttribute="leading" id="5nx-F3-0ct"/>
+                        <constraint firstAttribute="trailing" secondItem="AbZ-Vx-4D2" secondAttribute="trailing" id="K0A-2D-STm"/>
                         <constraint firstItem="C5F-JD-noZ" firstAttribute="top" secondItem="0Fs-L5-HyA" secondAttribute="bottom" constant="50" id="Ogr-RL-kow"/>
                         <constraint firstItem="0Fs-L5-HyA" firstAttribute="leading" secondItem="C3c-9h-VcT" secondAttribute="leading" constant="50" id="VFr-vs-ybf"/>
+                        <constraint firstItem="AbZ-Vx-4D2" firstAttribute="top" secondItem="C5F-JD-noZ" secondAttribute="bottom" constant="15" id="bc6-go-5ev"/>
                         <constraint firstItem="0Fs-L5-HyA" firstAttribute="top" secondItem="C3c-9h-VcT" secondAttribute="top" constant="150" id="sRN-Fe-99N"/>
                         <constraint firstItem="C5F-JD-noZ" firstAttribute="leading" secondItem="0Fs-L5-HyA" secondAttribute="leading" id="vqQ-0q-DOh"/>
                     </constraints>
                 </view>
             </subviews>
-            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <constraints>
                 <constraint firstItem="C3c-9h-VcT" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="Zkr-MD-x0L"/>
                 <constraint firstAttribute="bottom" secondItem="C3c-9h-VcT" secondAttribute="bottom" id="fiz-18-eQg"/>

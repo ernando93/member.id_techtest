@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		9E0A303723895DCC000A2B65 /* MenuCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0A303523895DCC000A2B65 /* MenuCell.swift */; };
+		9E0A303823895DCC000A2B65 /* MenuCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9E0A303623895DCC000A2B65 /* MenuCell.xib */; };
+		9E0A303A238960E4000A2B65 /* Menu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E0A3039238960E4000A2B65 /* Menu.swift */; };
 		9E19FA3423879528009792D2 /* KeychainController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E19FA3223879528009792D2 /* KeychainController.swift */; };
 		9E19FA3523879528009792D2 /* FilePersistentsController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E19FA3323879528009792D2 /* FilePersistentsController.swift */; };
 		9E19FA372387965F009792D2 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E19FA362387965F009792D2 /* User.swift */; };
@@ -47,6 +50,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		9E0A303523895DCC000A2B65 /* MenuCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuCell.swift; sourceTree = "<group>"; };
+		9E0A303623895DCC000A2B65 /* MenuCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuCell.xib; sourceTree = "<group>"; };
+		9E0A3039238960E4000A2B65 /* Menu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Menu.swift; sourceTree = "<group>"; };
 		9E19FA3223879528009792D2 /* KeychainController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KeychainController.swift; sourceTree = "<group>"; };
 		9E19FA3323879528009792D2 /* FilePersistentsController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilePersistentsController.swift; sourceTree = "<group>"; };
 		9E19FA362387965F009792D2 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
@@ -207,6 +213,8 @@
 			children = (
 				9E1B5195238680B600DC3A5A /* AwardsCell.swift */,
 				9E1B5196238680B600DC3A5A /* AwardsCell.xib */,
+				9E0A303523895DCC000A2B65 /* MenuCell.swift */,
+				9E0A303623895DCC000A2B65 /* MenuCell.xib */,
 			);
 			path = ViewCells;
 			sourceTree = "<group>";
@@ -216,6 +224,7 @@
 			children = (
 				9E19FA362387965F009792D2 /* User.swift */,
 				9E19FA3823879953009792D2 /* Awards.swift */,
+				9E0A3039238960E4000A2B65 /* Menu.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -326,6 +335,7 @@
 			files = (
 				9E9E23D923864C6400EA0CC8 /* Login.storyboard in Resources */,
 				9E19FA3E2387A6FC009792D2 /* MenuViewController.xib in Resources */,
+				9E0A303823895DCC000A2B65 /* MenuCell.xib in Resources */,
 				9E9E23B423864B4E00EA0CC8 /* LaunchScreen.storyboard in Resources */,
 				9E9E23B123864B4E00EA0CC8 /* Assets.xcassets in Resources */,
 				9E1B5198238680B600DC3A5A /* AwardsCell.xib in Resources */,
@@ -356,6 +366,7 @@
 			files = (
 				9E9E23E323864D6B00EA0CC8 /* Constant.swift in Sources */,
 				9E9E23DE23864D2400EA0CC8 /* HomeViewController.swift in Sources */,
+				9E0A303A238960E4000A2B65 /* Menu.swift in Sources */,
 				9E9E23DC23864D1900EA0CC8 /* LoginViewController.swift in Sources */,
 				9E19FA3423879528009792D2 /* KeychainController.swift in Sources */,
 				9E9E23E123864D5D00EA0CC8 /* Extension.swift in Sources */,
@@ -365,6 +376,7 @@
 				9E9E23E7238659D100EA0CC8 /* SceneDelegate.swift in Sources */,
 				9E19FA372387965F009792D2 /* User.swift in Sources */,
 				9E19FA3923879953009792D2 /* Awards.swift in Sources */,
+				9E0A303723895DCC000A2B65 /* MenuCell.swift in Sources */,
 				9E1B5197238680B600DC3A5A /* AwardsCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
