@@ -8,6 +8,7 @@
 
 import UIKit
 import SwiftUI
+import IQKeyboardManagerSwift
 
 class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
@@ -20,6 +21,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // This delegate does not imply the connecting scene or session are new (see `application:configurationForConnectingSceneSession` instead).
 
         setMainWindow()
+        configKeyboard()
     }
 
     func sceneDidDisconnect(_ scene: UIScene) {
@@ -75,5 +77,15 @@ extension SceneDelegate {
         let vc = sb.instantiateViewController(withIdentifier: "HomeVC") as! HomeViewController
         self.window?.rootViewController = vc
         self.window?.makeKeyAndVisible()
+    }
+}
+
+// MARK: - Keyboard Setting
+extension SceneDelegate {
+    func configKeyboard() {
+        IQKeyboardManager.shared.enable = true
+        IQKeyboardManager.shared.shouldShowToolbarPlaceholder = false
+        IQKeyboardManager.shared.enableAutoToolbar = false
+        IQKeyboardManager.shared.shouldResignOnTouchOutside = true
     }
 }

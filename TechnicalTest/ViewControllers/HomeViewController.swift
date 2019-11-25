@@ -13,6 +13,7 @@ class HomeViewController: UIViewController {
     var awards = DataAwards
     
     @IBOutlet weak var buttonMenu: UIButton!
+    @IBOutlet weak var buttonFilter: UIButton!
     @IBOutlet weak var collectionView: UICollectionView!
     
     override func viewDidLoad() {
@@ -28,6 +29,7 @@ extension HomeViewController {
     func setViewContent() {
         
         buttonMenu.addTarget(self, action: #selector(buttonMenuTapped), for: .touchUpInside)
+        buttonFilter.addTarget(self, action: #selector(buttonFilterTapped), for: .touchUpInside)
         setCollectionView(in: collectionView)
     }
     
@@ -77,11 +79,19 @@ extension HomeViewController: UICollectionViewDelegate, UICollectionViewDataSour
 extension HomeViewController {
     
     @objc func buttonMenuTapped() {
+        
         let vc = MenuViewController(nibName: "MenuViewController", bundle: nil)
         vc.selected = 0
         self.addChild(vc)
         vc.view.frame = self.view.frame
         self.view.addSubview(vc.view)
         vc.didMove(toParent: self)
+    }
+    
+    @objc func buttonFilterTapped() {
+        
+        let vc = FilterViewController(nibName: "FilterViewController", bundle: nil)
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true, completion: nil)
     }
 }

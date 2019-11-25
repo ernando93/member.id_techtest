@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SDWebImage
 
 class AwardsCell: UICollectionViewCell {
 
@@ -17,28 +18,31 @@ class AwardsCell: UICollectionViewCell {
     
     func setConfigure(with data: Awards) {
         
-        setContent(with: data.title ?? "", type: data.type ?? 0, name: data.name ?? "", poin: data.poin ?? 0)
+        setContent(with: data.title ?? "", type: data.type ?? 0, name: data.name ?? "", poin: data.poin ?? 0, url: data.image ?? "")
     }
 }
 
 //MARK: - Setup Content
 extension AwardsCell {
     
-    func setContent(with title: String, type: Int, name: String, poin: Int) {
+    func setContent(with title: String, type: Int, name: String, poin: Int, url: String) {
         
-        setImageView(in: imageAwards)
+        setImageView(in: imageAwards, url: url)
         setButtonType(in: buttonType, type: type, name: name)
         labelTitle.text = title
         labelPoin.text = String.formatCurrency(number: "\(poin)", digitBeforeZero: 0) + " Poin"
     }
     
-    func setImageView(in image: UIImageView) {
+    func setImageView(in image: UIImageView, url: String) {
         
         image.layer.cornerRadius = 5.0
         image.layer.shadowOffset = CGSize(width: 1.0, height: 3.0)
         image.layer.shadowRadius = 2.0
         image.layer.shadowOpacity = 0.20
         image.layer.masksToBounds = false
+        
+        image.sd_imageIndicator = SDWebImageActivityIndicator.gray
+        image.sd_setImage(with: URL(string: url), placeholderImage: UIImage(named: ""))
     }
     
     func setButtonType(in button: UIButton, type: Int, name: String) {

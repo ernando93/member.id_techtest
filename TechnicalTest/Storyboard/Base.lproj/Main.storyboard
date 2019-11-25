@@ -50,21 +50,32 @@
                                 </constraints>
                                 <state key="normal" image="IcAlignment"/>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eg6-l4-L1O">
+                                <rect key="frame" x="364" y="64" width="25" height="25"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="25" id="gS8-WM-twU"/>
+                                    <constraint firstAttribute="height" constant="25" id="soB-l1-yrZ"/>
+                                </constraints>
+                                <state key="normal" image="IcFilter"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="dcJ-ml-4bV" firstAttribute="centerY" secondItem="48w-mT-reQ" secondAttribute="centerY" id="6FB-3R-PAJ"/>
+                            <constraint firstItem="eg6-l4-L1O" firstAttribute="centerY" secondItem="48w-mT-reQ" secondAttribute="centerY" id="L9r-ed-Eh8"/>
                             <constraint firstItem="dcJ-ml-4bV" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="25" id="Nfv-Eb-MK4"/>
                             <constraint firstItem="0EW-vb-ZHq" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="bbF-DN-cQ8"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0EW-vb-ZHq" secondAttribute="bottom" id="d2Z-XP-v8K"/>
                             <constraint firstItem="0EW-vb-ZHq" firstAttribute="top" secondItem="48w-mT-reQ" secondAttribute="bottom" constant="25" id="fZV-af-EhK"/>
                             <constraint firstItem="48w-mT-reQ" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="15" id="lRG-zw-K4V"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="0EW-vb-ZHq" secondAttribute="trailing" id="loB-lX-hvG"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="eg6-l4-L1O" secondAttribute="trailing" constant="25" id="sqq-QY-gW9"/>
                             <constraint firstItem="48w-mT-reQ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="zyV-Na-Gp7"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                     <connections>
+                        <outlet property="buttonFilter" destination="eg6-l4-L1O" id="gXm-Hs-blJ"/>
                         <outlet property="buttonMenu" destination="dcJ-ml-4bV" id="Uoi-9H-oKG"/>
                         <outlet property="collectionView" destination="0EW-vb-ZHq" id="gzV-Wc-Y5Q"/>
                     </connections>
@@ -76,5 +87,6 @@
     </scenes>
     <resources>
         <image name="IcAlignment" width="24" height="24"/>
+        <image name="IcFilter" width="32" height="32"/>
     </resources>
 </document>

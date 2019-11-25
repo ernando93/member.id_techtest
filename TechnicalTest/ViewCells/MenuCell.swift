@@ -12,7 +12,6 @@ class MenuCell: UITableViewCell {
 
     @IBOutlet weak var labelTitle: UILabel!
     
-    
     func setConfigure(with data: Menu, selectedRow: Int) {
         
         labelTitle.text = data.title ?? ""
