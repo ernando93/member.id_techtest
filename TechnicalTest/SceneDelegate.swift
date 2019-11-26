@@ -14,7 +14,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         // Use this method to optionally configure and attach the UIWindow `window` to the provided UIWindowScene `scene`.
         // If using a storyboard, the `window` property will automatically be initialized and attached to the scene.
@@ -55,10 +54,14 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
 //MARK: - Setup Main Window
 extension SceneDelegate {
+    
     func setMainWindow() {
+        
         if User.currentUser != nil {
+            
             self.showHomePage()
         } else {
+            
             self.showLoginPage()
         }
     }
@@ -82,7 +85,9 @@ extension SceneDelegate {
 
 // MARK: - Keyboard Setting
 extension SceneDelegate {
+    
     func configKeyboard() {
+        
         IQKeyboardManager.shared.enable = true
         IQKeyboardManager.shared.shouldShowToolbarPlaceholder = false
         IQKeyboardManager.shared.enableAutoToolbar = false

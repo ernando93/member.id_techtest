@@ -31,11 +31,6 @@ extension MenuViewController: UIGestureRecognizerDelegate {
         self.view.backgroundColor = UIColor.black.withAlphaComponent(0.45)
         setTableView(in: tableView)
         
-//        let tapView = UITapGestureRecognizer(target: self, action: #selector(self.viewTapped))
-//        tapView.delegate = self
-//        self.view.addGestureRecognizer(tapView)
-//        self.view.isUserInteractionEnabled = true
-        
     }
     
     func showAnimate() {
@@ -111,10 +106,10 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
             removeAnimate()
         case 1:
             
-            self.present(UIAlertController.defaultAlertController(title: "", message: "Coming Soon!", textAction: "OK"), animated: true, completion: nil)
+            self.present(UIAlertController.defaultAlertController(title: "", message: "Feature is under development", textAction: "OK"), animated: true, completion: nil)
         case 2:
         
-            self.present(UIAlertController.defaultAlertController(title: "", message: "Coming Soon!", textAction: "OK"), animated: true, completion: nil)
+            self.present(UIAlertController.defaultAlertController(title: "", message: "Feature is under development", textAction: "OK"), animated: true, completion: nil)
         case 3:
             
             User.logout()

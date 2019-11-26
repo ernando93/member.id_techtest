@@ -37,6 +37,8 @@
 		9EE1A1E0238CD93B0058849D /* TypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EE1A1DE238CD93B0058849D /* TypeCell.xib */; };
 		9EE1A1E3238CD95F0058849D /* PointCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE1A1E1238CD95F0058849D /* PointCell.swift */; };
 		9EE1A1E4238CD95F0058849D /* PointCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EE1A1E2238CD95F0058849D /* PointCell.xib */; };
+		9EE1A1E8238D20380058849D /* FilterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE1A1E6238D20380058849D /* FilterCell.swift */; };
+		9EE1A1E9238D20380058849D /* FilterCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EE1A1E7238D20380058849D /* FilterCell.xib */; };
 		A3492247BDDBB9E6F7550AC5 /* Pods_TechnicalTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCEC91D823D476650910C41 /* Pods_TechnicalTestTests.framework */; };
 		B5AD7F76E1B392C25BF2CEC6 /* Pods_TechnicalTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF6196F032451D5CF2FDFCA /* Pods_TechnicalTestUITests.framework */; };
 		FCB719334677963258D656AF /* Pods_TechnicalTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5865B68201680564DCCD49BE /* Pods_TechnicalTest.framework */; };
@@ -104,6 +106,8 @@
 		9EE1A1DE238CD93B0058849D /* TypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TypeCell.xib; sourceTree = "<group>"; };
 		9EE1A1E1238CD95F0058849D /* PointCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointCell.swift; sourceTree = "<group>"; };
 		9EE1A1E2238CD95F0058849D /* PointCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointCell.xib; sourceTree = "<group>"; };
+		9EE1A1E6238D20380058849D /* FilterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilterCell.swift; sourceTree = "<group>"; };
+		9EE1A1E7238D20380058849D /* FilterCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FilterCell.xib; sourceTree = "<group>"; };
 		F2F6632F7C9A9F08E98AEDAB /* Pods-TechnicalTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechnicalTest.release.xcconfig"; path = "Target Support Files/Pods-TechnicalTest/Pods-TechnicalTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -275,6 +279,7 @@
 		9E9E23E423864DAE00EA0CC8 /* ViewCells */ = {
 			isa = PBXGroup;
 			children = (
+				9EE1A1E5238D201B0058849D /* Filter Cell */,
 				9EE1A1DC238CD90C0058849D /* Type Cell */,
 				9EE1A1DB238CD8FD0058849D /* Point Cell */,
 				9EE1A1DA238CD8F40058849D /* Menu Cell */,
@@ -328,6 +333,15 @@
 				9EE1A1DE238CD93B0058849D /* TypeCell.xib */,
 			);
 			path = "Type Cell";
+			sourceTree = "<group>";
+		};
+		9EE1A1E5238D201B0058849D /* Filter Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9EE1A1E6238D20380058849D /* FilterCell.swift */,
+				9EE1A1E7238D20380058849D /* FilterCell.xib */,
+			);
+			path = "Filter Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -445,6 +459,7 @@
 				9E9E23B123864B4E00EA0CC8 /* Assets.xcassets in Resources */,
 				9EE1A1E0238CD93B0058849D /* TypeCell.xib in Resources */,
 				9E1B5198238680B600DC3A5A /* AwardsCell.xib in Resources */,
+				9EE1A1E9238D20380058849D /* FilterCell.xib in Resources */,
 				9E33225B238BD600001D99F1 /* FilterViewController.xib in Resources */,
 				9EE1A1E4238CD95F0058849D /* PointCell.xib in Resources */,
 				9E9E23AF23864B4D00EA0CC8 /* Main.storyboard in Resources */,
@@ -499,14 +514,18 @@
 			);
 			inputPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-TechnicalTest/Pods-TechnicalTest-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/AORangeSlider/AORangeSlider.framework",
 				"${BUILT_PRODUCTS_DIR}/IQKeyboardManagerSwift/IQKeyboardManagerSwift.framework",
+				"${BUILT_PRODUCTS_DIR}/RangeSeekSlider/RangeSeekSlider.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/AORangeSlider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/IQKeyboardManagerSwift.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/RangeSeekSlider.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -565,6 +584,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9EE1A1E8238D20380058849D /* FilterCell.swift in Sources */,
 				9E9E23E323864D6B00EA0CC8 /* Constant.swift in Sources */,
 				9E9E23DE23864D2400EA0CC8 /* HomeViewController.swift in Sources */,
 				9E0A303A238960E4000A2B65 /* Menu.swift in Sources */,

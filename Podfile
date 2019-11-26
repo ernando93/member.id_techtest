@@ -12,6 +12,10 @@ target 'TechnicalTest' do
   
   #IQKeyboard Manager
   pod 'IQKeyboardManagerSwift', '6.3.0'
+  
+  #Range Slider
+  pod 'AORangeSlider', '~> 1.0'
+  pod 'RangeSeekSlider'
 
   target 'TechnicalTestTests' do
     inherit! :search_paths

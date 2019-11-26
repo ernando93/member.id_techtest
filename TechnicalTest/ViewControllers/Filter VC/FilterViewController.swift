@@ -37,6 +37,7 @@ extension FilterViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
+        tableView.register(UINib(nibName: "FilterCell", bundle: nil), forCellReuseIdentifier: "filterCell")
         tableView.register(UINib(nibName: "PointCell", bundle: nil), forCellReuseIdentifier: "pointCell")
         tableView.register(UINib(nibName: "TypeCell", bundle: nil), forCellReuseIdentifier: "typeCell")
         
@@ -126,10 +127,10 @@ extension FilterViewController: UITableViewDelegate, UITableViewDataSource {
             
         case 0:
             
-            return 100.0
+            return 130.0
         case 1:
             
-            return 100.0
+            return 120.0
         case 2:
             
             return 50.0
@@ -144,12 +145,16 @@ extension FilterViewController: UITableViewDelegate, UITableViewDataSource {
         switch indexPath.section {
         case 0:
             
-            let cell = tableView.dequeueReusableCell(withIdentifier: "pointCell", for: indexPath) as? PointCell
+            let cell = tableView.dequeueReusableCell(withIdentifier: "filterCell", for: indexPath) as? FilterCell
+            
+            cell?.setConfigure()
             
             return cell ?? UITableViewCell()
         case 1:
             
             let cell = tableView.dequeueReusableCell(withIdentifier: "pointCell", for: indexPath) as? PointCell
+            
+            cell?.setConfigure()
             
             return cell ?? UITableViewCell()
         case 2:
@@ -206,5 +211,10 @@ extension FilterViewController {
     @IBAction func buttonCancelTapped(_ sender: UIButton) {
         
         self.dismiss(animated: true, completion: nil)
+    }
+    
+    @IBAction func buttonFilterTapped(_ sender: UIButton) {
+        
+        self.present(UIAlertController.defaultAlertController(title: "", message: "Feature is under development", textAction: "OK"), animated: true, completion: nil)
     }
 }
