@@ -33,6 +33,10 @@
 		9E9E23E123864D5D00EA0CC8 /* Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9E23E023864D5D00EA0CC8 /* Extension.swift */; };
 		9E9E23E323864D6B00EA0CC8 /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9E23E223864D6B00EA0CC8 /* Constant.swift */; };
 		9E9E23E7238659D100EA0CC8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E9E23E6238659D000EA0CC8 /* SceneDelegate.swift */; };
+		9EE1A1DF238CD93B0058849D /* TypeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE1A1DD238CD93B0058849D /* TypeCell.swift */; };
+		9EE1A1E0238CD93B0058849D /* TypeCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EE1A1DE238CD93B0058849D /* TypeCell.xib */; };
+		9EE1A1E3238CD95F0058849D /* PointCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE1A1E1238CD95F0058849D /* PointCell.swift */; };
+		9EE1A1E4238CD95F0058849D /* PointCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 9EE1A1E2238CD95F0058849D /* PointCell.xib */; };
 		A3492247BDDBB9E6F7550AC5 /* Pods_TechnicalTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5CCEC91D823D476650910C41 /* Pods_TechnicalTestTests.framework */; };
 		B5AD7F76E1B392C25BF2CEC6 /* Pods_TechnicalTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7BF6196F032451D5CF2FDFCA /* Pods_TechnicalTestUITests.framework */; };
 		FCB719334677963258D656AF /* Pods_TechnicalTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5865B68201680564DCCD49BE /* Pods_TechnicalTest.framework */; };
@@ -96,6 +100,10 @@
 		9E9E23E023864D5D00EA0CC8 /* Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extension.swift; sourceTree = "<group>"; };
 		9E9E23E223864D6B00EA0CC8 /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		9E9E23E6238659D000EA0CC8 /* SceneDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		9EE1A1DD238CD93B0058849D /* TypeCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TypeCell.swift; sourceTree = "<group>"; };
+		9EE1A1DE238CD93B0058849D /* TypeCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TypeCell.xib; sourceTree = "<group>"; };
+		9EE1A1E1238CD95F0058849D /* PointCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointCell.swift; sourceTree = "<group>"; };
+		9EE1A1E2238CD95F0058849D /* PointCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = PointCell.xib; sourceTree = "<group>"; };
 		F2F6632F7C9A9F08E98AEDAB /* Pods-TechnicalTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TechnicalTest.release.xcconfig"; path = "Target Support Files/Pods-TechnicalTest/Pods-TechnicalTest.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -267,10 +275,10 @@
 		9E9E23E423864DAE00EA0CC8 /* ViewCells */ = {
 			isa = PBXGroup;
 			children = (
-				9E1B5195238680B600DC3A5A /* AwardsCell.swift */,
-				9E1B5196238680B600DC3A5A /* AwardsCell.xib */,
-				9E0A303523895DCC000A2B65 /* MenuCell.swift */,
-				9E0A303623895DCC000A2B65 /* MenuCell.xib */,
+				9EE1A1DC238CD90C0058849D /* Type Cell */,
+				9EE1A1DB238CD8FD0058849D /* Point Cell */,
+				9EE1A1DA238CD8F40058849D /* Menu Cell */,
+				9EE1A1D9238CD8E90058849D /* Awards Cell */,
 			);
 			path = ViewCells;
 			sourceTree = "<group>";
@@ -284,6 +292,42 @@
 				9E33225C238BDA1B001D99F1 /* AwardsType.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		9EE1A1D9238CD8E90058849D /* Awards Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9E1B5195238680B600DC3A5A /* AwardsCell.swift */,
+				9E1B5196238680B600DC3A5A /* AwardsCell.xib */,
+			);
+			path = "Awards Cell";
+			sourceTree = "<group>";
+		};
+		9EE1A1DA238CD8F40058849D /* Menu Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9E0A303523895DCC000A2B65 /* MenuCell.swift */,
+				9E0A303623895DCC000A2B65 /* MenuCell.xib */,
+			);
+			path = "Menu Cell";
+			sourceTree = "<group>";
+		};
+		9EE1A1DB238CD8FD0058849D /* Point Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9EE1A1E1238CD95F0058849D /* PointCell.swift */,
+				9EE1A1E2238CD95F0058849D /* PointCell.xib */,
+			);
+			path = "Point Cell";
+			sourceTree = "<group>";
+		};
+		9EE1A1DC238CD90C0058849D /* Type Cell */ = {
+			isa = PBXGroup;
+			children = (
+				9EE1A1DD238CD93B0058849D /* TypeCell.swift */,
+				9EE1A1DE238CD93B0058849D /* TypeCell.xib */,
+			);
+			path = "Type Cell";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -399,8 +443,10 @@
 				9E0A303823895DCC000A2B65 /* MenuCell.xib in Resources */,
 				9E9E23B423864B4E00EA0CC8 /* LaunchScreen.storyboard in Resources */,
 				9E9E23B123864B4E00EA0CC8 /* Assets.xcassets in Resources */,
+				9EE1A1E0238CD93B0058849D /* TypeCell.xib in Resources */,
 				9E1B5198238680B600DC3A5A /* AwardsCell.xib in Resources */,
 				9E33225B238BD600001D99F1 /* FilterViewController.xib in Resources */,
+				9EE1A1E4238CD95F0058849D /* PointCell.xib in Resources */,
 				9E9E23AF23864B4D00EA0CC8 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -529,8 +575,10 @@
 				9E9E23A823864B4D00EA0CC8 /* AppDelegate.swift in Sources */,
 				9E19FA3D2387A6FC009792D2 /* MenuViewController.swift in Sources */,
 				9E33225A238BD600001D99F1 /* FilterViewController.swift in Sources */,
+				9EE1A1E3238CD95F0058849D /* PointCell.swift in Sources */,
 				9E9E23E7238659D100EA0CC8 /* SceneDelegate.swift in Sources */,
 				9E19FA372387965F009792D2 /* User.swift in Sources */,
+				9EE1A1DF238CD93B0058849D /* TypeCell.swift in Sources */,
 				9E19FA3923879953009792D2 /* Awards.swift in Sources */,
 				9E0A303723895DCC000A2B65 /* MenuCell.swift in Sources */,
 				9E1B5197238680B600DC3A5A /* AwardsCell.swift in Sources */,

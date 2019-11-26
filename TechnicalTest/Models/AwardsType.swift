@@ -15,7 +15,7 @@ struct AwardsType {
     var type: Int?
 }
 
-var addAwardsType = [AwardsType(id: 0, name: "All Type", type: 0),
+var DataAwardsType = [AwardsType(id: 0, name: "All Type", type: 0),
                      AwardsType(id: 1, name: "Vouchers", type: 0),
                      AwardsType(id: 2, name: "Products", type: 1),
                      AwardsType(id: 3, name: "Others", type: 2)]

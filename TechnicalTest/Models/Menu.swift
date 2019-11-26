@@ -14,7 +14,7 @@ struct Menu {
     var title: String?
 }
 
-var addMenu = [Menu(id: 0, title: "Home"),
+var DataMenu = [Menu(id: 0, title: "Home"),
                Menu(id: 1, title: "Cards"),
                Menu(id: 2, title: "Profile"),
                Menu(id: 3, title: "Logout")]

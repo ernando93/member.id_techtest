@@ -10,7 +10,7 @@ import UIKit
 
 class MenuViewController: UIViewController {
 
-    var menu = addMenu
+    var menu = DataMenu
     @IBOutlet weak var tableView: UITableView!
     
     var selected: Int = 0
